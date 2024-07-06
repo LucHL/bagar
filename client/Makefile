@@ -7,7 +7,13 @@
 
 OS	:=	$(shell uname -s)
 
-SRC	=	main.cpp
+SRC	=	main.cpp \
+        Game.cpp \
+        connection/client.cpp \
+        scene/AScene.cpp \
+        scene/SceneManager.cpp \
+        data/GlobalData.cpp \
+        scene/type/Menu.cpp
 
 OBJ	=	$(SRC:.cpp=.o)
 
@@ -36,7 +42,7 @@ $(OUT):	$(OBJ)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f *.o
+	rm -f $(OBJ)
 
 fclean:	clean
 	rm -f $(OUT)
