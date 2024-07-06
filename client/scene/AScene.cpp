@@ -39,3 +39,14 @@ void AScene::draw2D()
 {
 
 }
+
+std::string AScene::handleKeyBoard()
+{
+    GlobalData &data = GlobalData::getInstance();
+    for (auto &i : data.getKey()) {
+        if (IsKeyPressed(i.first)) {
+            return i.second;
+        }
+    }
+    return "";
+}

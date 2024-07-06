@@ -47,7 +47,7 @@ void Game::gameLoop()
 
         BeginDrawing();
 
-            ClearBackground(RAYWHITE);
+            ClearBackground(BLACK);
 
             BeginMode3D(data.getCam3D());
                 _currentScene->draw3D();

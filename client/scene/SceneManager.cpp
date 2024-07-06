@@ -27,8 +27,9 @@ std::shared_ptr<IScene> SceneManager::changeScene(Scene next)
         case MENU:
             _current = MENU;
             return std::make_shared<Menu>();
-        case GAME:
-            _current = GAME;
+        case MAPTEST:
+            _current = MAPTEST;
+            return std::make_shared<MapTest>();
         case PAUSE:
             _current = PAUSE;
         case PARAM:

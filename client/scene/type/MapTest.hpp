@@ -2,17 +2,17 @@
 ** EPITECH PROJECT, 2024
 ** bagar
 ** File description:
-** Menu
+** MapTest
 */
 
-#ifndef MENU_HPP_
-    #define MENU_HPP_
+#ifndef MAPTEST_HPP_
+    #define MAPTEST_HPP_
     #include "../AScene.hpp"
 
-class Menu : public AScene {
+class MapTest : public AScene {
     public:
-        Menu();
-        ~Menu();
+        MapTest();
+        ~MapTest();
 
         void drawPlayer() override;
         void drawMap() override;
@@ -21,9 +21,6 @@ class Menu : public AScene {
         void draw2D() override;
 
     private:
-        int _focusRect;
-        std::string _port;
-        std::string _id;
 };
 
-#endif /* !MENU_HPP_ */
+#endif /* !MAPTEST_HPP_ */

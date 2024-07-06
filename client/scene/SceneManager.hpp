@@ -10,10 +10,11 @@
     #include <memory>
     #include "AScene.hpp"
     #include "type/Menu.hpp"
+    #include "type/MapTest.hpp"
 
 enum Scene {
     MENU,
-    GAME,
+    MAPTEST,
     PAUSE,
     PARAM
 };

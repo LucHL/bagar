@@ -19,6 +19,7 @@ class AScene : public IScene {
         void handleCamera();
         void draw3D();
         void draw2D();
+        std::string handleKeyBoard();
 
     private:
 };

@@ -13,7 +13,8 @@ SRC	=	main.cpp \
         scene/AScene.cpp \
         scene/SceneManager.cpp \
         data/GlobalData.cpp \
-        scene/type/Menu.cpp
+        scene/type/Menu.cpp \
+        scene/type/MapTest.cpp
 
 OBJ	=	$(SRC:.cpp=.o)
 
