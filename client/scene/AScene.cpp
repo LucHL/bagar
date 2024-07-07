@@ -50,3 +50,13 @@ std::string AScene::handleKeyBoard()
     }
     return "";
 }
+
+void AScene::beforeDrawing()
+{
+
+}
+
+void AScene::beforeMode()
+{
+
+}

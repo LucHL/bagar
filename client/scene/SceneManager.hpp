@@ -8,7 +8,7 @@
 #ifndef SCENEMANAGER_HPP_
     #define SCENEMANAGER_HPP_
     #include <memory>
-    #include "AScene.hpp"
+    #include "IScene.hpp"
     #include "type/Menu.hpp"
     #include "type/MapTest.hpp"
 

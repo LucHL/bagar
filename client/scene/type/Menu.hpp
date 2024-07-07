@@ -8,6 +8,7 @@
 #ifndef MENU_HPP_
     #define MENU_HPP_
     #include "../AScene.hpp"
+    #include "../SceneManager.hpp"
 
 class Menu : public AScene {
     public:
@@ -19,6 +20,8 @@ class Menu : public AScene {
         void handleCamera() override;
         void draw3D() override;
         void draw2D() override;
+        void beforeDrawing() override;
+        void beforeMode() override;
 
     private:
         int _focusRect;

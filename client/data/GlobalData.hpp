@@ -10,6 +10,8 @@
     #include "raylib.h"
     #include "unordered_map"
     #include <string>
+    #include <memory>
+    #include "../scene/IScene.hpp"
 
 class GlobalData {
     public:
@@ -20,6 +22,7 @@ class GlobalData {
         Camera2D &getCam2D();
         bool &boolGameClose();
         std::unordered_map<int, std::string> &getKey();
+        std::shared_ptr<IScene> &getCurrentScene();
     
     protected:
         GlobalData();
@@ -29,6 +32,7 @@ class GlobalData {
         Camera2D _cam2;
         bool _closeGame;
         std::unordered_map<int, std::string> _key;
+        std::shared_ptr<IScene> _currentScene;
 };
 
 #endif /* !GLOBALDATA_HPP_ */

@@ -9,7 +9,6 @@
     #define ISCENE_HPP_
     #include "raylib.h"
     #include <iostream>
-    #include "../data/GlobalData.hpp"
 
 class IScene {
     public:
@@ -21,6 +20,8 @@ class IScene {
         virtual void draw3D() = 0;
         virtual void draw2D() = 0;
         virtual std::string handleKeyBoard() = 0;
+        virtual void beforeDrawing() = 0;
+        virtual void beforeMode() = 0;
 };
 
 #endif /* !ISCENE_HPP_ */

@@ -70,7 +70,21 @@ void Menu::draw2D()
     DrawText("START", GetScreenWidth() / 2.15, GetScreenHeight() / 1.49, 40, BLACK);
 
     if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), start)) {
+        GlobalData &data = GlobalData::getInstance();
         SceneManager &scene = SceneManager::getInstance();
-        scene.changeScene(MAPTEST);
+        data.getCurrentScene() = scene.changeScene(MAPTEST);
     }
+}
+
+void Menu::beforeDrawing()
+{
+    if (IsKeyPressed(KEY_ESCAPE)) {
+        GlobalData &data = GlobalData::getInstance();
+        data.boolGameClose() = true;
+    }
+}
+
+void Menu::beforeMode()
+{
+    ClearBackground(BLACK);
 }

@@ -20,7 +20,6 @@ class Game {
         void gameLoop();
 
     private:
-        std::shared_ptr<IScene> _currentScene;
 };
 
 #endif /* !GAME_HPP_ */

@@ -6,6 +6,7 @@
 */
 
 #include "GlobalData.hpp"
+#include "../scene/IScene.hpp"
 
 GlobalData::GlobalData()
 {
@@ -60,4 +61,9 @@ bool &GlobalData::boolGameClose()
 std::unordered_map<int, std::string> &GlobalData::getKey()
 {
     return _key;
+}
+
+std::shared_ptr<IScene> &GlobalData::getCurrentScene()
+{
+    return _currentScene;
 }

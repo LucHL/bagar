@@ -8,6 +8,7 @@
 #ifndef ASCENE_HPP_
     #define ASCENE_HPP_
     #include "IScene.hpp"
+    #include "../data/GlobalData.hpp"
 
 class AScene : public IScene {
     public:
@@ -20,6 +21,8 @@ class AScene : public IScene {
         void draw3D();
         void draw2D();
         std::string handleKeyBoard();
+        void beforeDrawing();
+        void beforeMode();
 
     private:
 };

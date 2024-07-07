@@ -29,7 +29,7 @@ Game::Game()
     cam2.zoom = 1.0f;
     SetTargetFPS(60);
 
-    _currentScene = scene.changeScene(MENU);
+    data.getCurrentScene() = scene.changeScene(MENU);
 }
 
 Game::~Game()
@@ -42,19 +42,18 @@ void Game::gameLoop()
 
     while (!data.boolGameClose()) {
 
-        if (IsKeyPressed(KEY_ESCAPE))
-            data.boolGameClose() = true;
+        data.getCurrentScene()->beforeDrawing();
 
         BeginDrawing();
 
-            ClearBackground(BLACK);
+            data.getCurrentScene()->beforeMode();
 
             BeginMode3D(data.getCam3D());
-                _currentScene->draw3D();
+                data.getCurrentScene()->draw3D();
             EndMode3D();
 
             BeginMode2D(data.getCam2D());
-                _currentScene->draw2D();
+                data.getCurrentScene()->draw2D();
             EndMode2D();
 
         EndDrawing();
