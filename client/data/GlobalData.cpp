@@ -25,11 +25,11 @@ GlobalData::GlobalData()
         {KEY_BACKSPACE, "BACKSPACE"}, {KEY_TAB, "TAB"},
         {KEY_ZERO, "0"}, {KEY_ONE, "1"}, {KEY_TWO, "2"}, {KEY_THREE, "3"},
         {KEY_FOUR, "4"}, {KEY_FIVE, "5"}, {KEY_SIX, "6"}, {KEY_SEVEN, "7"},
-        {KEY_EIGHT, "8"}, {KEY_NINE, "9"},
+        {KEY_EIGHT, "8"}, {KEY_NINE, "9"}, {KEY_KP_0, "0"},
         {KEY_KP_1, "1"}, {KEY_KP_2, "2"}, {KEY_KP_3, "3"}, {KEY_KP_4, "4"},
         {KEY_KP_5, "5"}, {KEY_KP_6, "6"}, {KEY_KP_7, "7"}, {KEY_KP_8, "8"},
         {KEY_KP_9, "9"},
-        {KEY_PERIOD, "."}
+        {KEY_PERIOD, "."}, {KEY_KP_DECIMAL, "."}
     };
 }
 
