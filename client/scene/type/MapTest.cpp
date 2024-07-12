@@ -33,8 +33,9 @@ void MapTest::handleCamera()
 void MapTest::draw3D()
 {
     blockCursor();
-    DrawGrid(10, 1);
-    DrawCube({0,0,0}, 50, 50, 50, GREEN);
+    DrawGrid(20, 1.0f);
+    DrawCube({0.0f, 0.0f, 0.0f}, 2.0f, 2.0f, 2.0f, GREEN);
+    DrawCubeWires({0.0f, 0.0f, 0.0f}, 2.0f, 2.0f, 2.0f, MAROON);
 }
 
 void MapTest::draw2D()
@@ -46,9 +47,14 @@ void MapTest::beforeDrawing()
 {
     GlobalData &data = GlobalData::getInstance();
     UpdateCamera(&data.getCam3D(), CAMERA_FIRST_PERSON);
+
     if (IsKeyPressed(KEY_ESCAPE)) {
         SceneManager &scene = SceneManager::getInstance();
         data.getCurrentScene() = scene.changeScene(MENU);
+    }
+
+    if (IsKeyPressed(KEY_P)) {              //! - DEBUG - Touche P sorti du programme
+        data.boolGameClose() = true;
     }
 }
 

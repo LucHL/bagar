@@ -11,6 +11,7 @@
 Menu::Menu()
 {
     _focusRect = 0;
+    _music = Audio("client/assets/music/menu/Brawlhalla_menu.mp3", true);
 }
 
 Menu::~Menu()
@@ -38,7 +39,7 @@ void Menu::draw3D()
 
 void Menu::draw2D()
 {
-    DrawText("BAGAR", GetScreenWidth() / 2.3, 50, 70, RAYWHITE);
+    DrawText("BAGAR", GetScreenWidth() / 2.3, 100, 70, RAYWHITE);
     Rectangle id = { (float)(GetScreenWidth() / 2.7), (float)(GetScreenHeight() / 3.5), 500, 50 };
     Rectangle port = { (float)(GetScreenWidth() / 2.7), (float)(GetScreenHeight() / 2.5), 500, 50 };
     Rectangle start = { (float)(GetScreenWidth() / 2.23), (float)(GetScreenHeight() / 1.5), 200, 50 };
@@ -69,6 +70,8 @@ void Menu::draw2D()
     DrawRectangleRec(start, RAYWHITE);
     DrawText("START", GetScreenWidth() / 2.15, GetScreenHeight() / 1.49, 40, BLACK);
 
+    // TODO add button for user name
+
     if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), start)) {
         GlobalData &data = GlobalData::getInstance();
         SceneManager &scene = SceneManager::getInstance();
@@ -78,6 +81,8 @@ void Menu::draw2D()
 
 void Menu::beforeDrawing()
 {
+    _music.updateMusic();
+
     if (IsKeyPressed(KEY_ESCAPE)) {
         GlobalData &data = GlobalData::getInstance();
         data.boolGameClose() = true;

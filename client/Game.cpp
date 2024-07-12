@@ -11,13 +11,13 @@ Game::Game()
 {
     GlobalData &data = GlobalData::getInstance();
     SceneManager &scene = SceneManager::getInstance();
-    InitWindow(1920, 1080, "BAGAR");
+    InitWindow(_SCREEN_WIDTH, _SCREEN_HEIGHT, "BAGAR"); // TODO handle size in param
     InitAudioDevice();
-    SetMasterVolume(10);
+    SetMasterVolume(_MUSIC_VOLUME); // TODO handle volume in param
 
     Camera3D &cam3 = data.getCam3D();
-    cam3.position = (Vector3){ 0.0f, 6.0f, 0.0f };
-    cam3.target = (Vector3){ 0.0f, 1.0f, 0.0f };
+    cam3.position = (Vector3){ 4.0f, 4.0f, 4.0f };
+    cam3.target = (Vector3){ 0.0f, 0.0f, 0.0f };
     cam3.up = (Vector3){ 0.0f, 1.0f, 0.0f };
     cam3.fovy = 45.0f;
     cam3.projection = CAMERA_PERSPECTIVE;
@@ -27,7 +27,9 @@ Game::Game()
     cam2.offset = (Vector2){ 0.0f, 0.0f };
     cam2.rotation = 0.0f;
     cam2.zoom = 1.0f;
-    SetTargetFPS(60);
+    SetTargetFPS(_FPS);
+
+    ToggleFullscreen(); // TODO handle in param
 
     data.getCurrentScene() = scene.changeScene(MENU);
 }

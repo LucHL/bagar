@@ -14,7 +14,8 @@ SRC	=	main.cpp \
         scene/SceneManager.cpp \
         data/GlobalData.cpp \
         scene/type/Menu.cpp \
-        scene/type/MapTest.cpp
+        scene/type/MapTest.cpp \
+        objects/Audio.cpp
 
 OBJ	=	$(SRC:.cpp=.o)
 
@@ -22,14 +23,14 @@ NAME	=   client
 
 ifeq ($(OS), Linux)
     CC	=	g++
-    CFLAGS	=	-Wall -std=c++11
-    LDFLAGS	=	-lraylib -lGL -lm -lpthread -ldl -lrt -lX11
+    CFLAGS	=   -std=c++20 -Iinclude -g
+    LDFLAGS	=	-lraylib
     OUT	=	$(NAME)
 endif
 
 ifeq ($(OS), Windows_NT)
     CC	=	x86_64-w64-mingw32-g++
-    CFLAGS	=	-Wall -std=c++11
+    CFLAGS	=   -std=c++20 -Iinclude -g
     LDFLAGS	=	-lraylib -lopengl32 -lgdi32 -lwinmm
     OUT	=	$(NAME).exe
 endif

@@ -9,6 +9,8 @@
     #define ISCENE_HPP_
     #include "raylib.h"
     #include <iostream>
+    #include "../objects/Audio.hpp"
+    #include <vector>
 
 class IScene {
     public:

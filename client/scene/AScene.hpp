@@ -24,7 +24,8 @@ class AScene : public IScene {
         void beforeDrawing();
         void beforeMode();
 
-    private:
+    protected:
+        Audio _music;
 };
 
 #endif /* !ASCENE_HPP_ */

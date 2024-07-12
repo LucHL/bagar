@@ -13,6 +13,12 @@
     #include <memory>
     #include "../scene/IScene.hpp"
 
+    #define _SCREEN_WIDTH GetScreenWidth()
+    #define _SCREEN_HEIGHT GetScreenHeight()
+    #define _FPS 60
+    #define _MUSIC_VOLUME 10
+    #define _SOUND_VOLUME 10
+
 class GlobalData {
     public:
         ~GlobalData();
@@ -33,6 +39,7 @@ class GlobalData {
         bool _closeGame;
         std::unordered_map<int, std::string> _key;
         std::shared_ptr<IScene> _currentScene;
+        std::string _userName;
 };
 
 #endif /* !GLOBALDATA_HPP_ */

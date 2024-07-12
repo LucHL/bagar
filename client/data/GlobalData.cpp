@@ -29,7 +29,8 @@ GlobalData::GlobalData()
         {KEY_KP_1, "1"}, {KEY_KP_2, "2"}, {KEY_KP_3, "3"}, {KEY_KP_4, "4"},
         {KEY_KP_5, "5"}, {KEY_KP_6, "6"}, {KEY_KP_7, "7"}, {KEY_KP_8, "8"},
         {KEY_KP_9, "9"},
-        {KEY_PERIOD, "."}, {KEY_KP_DECIMAL, "."}
+        {KEY_PERIOD, "."}, {KEY_KP_DECIMAL, "."}, {KEY_KP_SUBTRACT, "-"},
+        {KEY_MINUS, "-"}
     };
 }
 
